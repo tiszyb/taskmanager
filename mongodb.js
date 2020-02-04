@@ -65,22 +65,22 @@ MongoClient.connect( connectionURL, {useNewUrlParser : true,  useUnifiedTopology
     //     console.log(task)
     // })
     
-    // db.collection('tasks').insertMany([
-    //     {
-    //         description : 'clean the house',
-    //         completed : true
-    //     },
-    //     {
-    //         description : 'Sweep the room',
-    //         completed : true
-    //     },
-    //     {
-    //         description : 'wash the car',
-    //         completed : false
-    //     }
-    // ], (error, result) => {
-    //     if(error) return console.log('Could not insert into db')
+    db.collection('tasks').insertMany([
+        {
+            description : 'clean the house',
+            completed : true
+        },
+        {
+            description : 'Sweep the room',
+            completed : true
+        },
+        {
+            description : 'wash the car',
+            completed : false
+        }
+    ], (error, result) => {
+        if(error) return console.log('Could not insert into db')
 
-    //     console.log(result.ops)
-    // })
+        console.log(result.ops)
+    })
 })
